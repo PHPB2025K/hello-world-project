@@ -1,0 +1,148 @@
+import type { LayoutMeta } from '@/types'
+
+export const LAYOUTS: LayoutMeta[] = [
+  {
+    id: 'minimalist',
+    name: 'Minimalista',
+    description: 'Clean, espaço branco, linhas finas',
+    fonts: ['Inter'],
+    colors: {
+      primary: '#1a1a1a',
+      secondary: '#666666',
+      background: '#ffffff',
+      text: '#1a1a1a',
+      accent: '#e0e0e0',
+    },
+    previewGradient: 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)',
+  },
+  {
+    id: 'bold-impact',
+    name: 'Bold / Impacto',
+    description: 'Tipografia grande, alto contraste',
+    fonts: ['Bebas Neue', 'Roboto'],
+    colors: {
+      primary: '#ff0000',
+      secondary: '#000000',
+      background: '#ffffff',
+      text: '#000000',
+      accent: '#ff0000',
+    },
+    previewGradient: 'linear-gradient(135deg, #ff0000 0%, #000000 100%)',
+  },
+  {
+    id: 'elegant',
+    name: 'Elegante',
+    description: 'Serif, dourado, sofisticado',
+    fonts: ['Playfair Display', 'Lato'],
+    colors: {
+      primary: '#c9a96e',
+      secondary: '#2c2c2c',
+      background: '#faf8f5',
+      text: '#2c2c2c',
+      accent: '#c9a96e',
+    },
+    previewGradient: 'linear-gradient(135deg, #faf8f5 0%, #c9a96e 100%)',
+  },
+  {
+    id: 'corporate',
+    name: 'Corporativo',
+    description: 'Tons de azul, grade estruturada',
+    fonts: ['Source Sans 3'],
+    colors: {
+      primary: '#1e40af',
+      secondary: '#3b82f6',
+      background: '#f8fafc',
+      text: '#1e293b',
+      accent: '#1e40af',
+    },
+    previewGradient: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
+  },
+  {
+    id: 'colorful',
+    name: 'Colorido / Vibrante',
+    description: 'Gradientes vibrantes, divertido',
+    fonts: ['Poppins'],
+    colors: {
+      primary: '#8b5cf6',
+      secondary: '#ec4899',
+      background: '#fdf2f8',
+      text: '#1e1b4b',
+      accent: '#f59e0b',
+    },
+    previewGradient: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f59e0b 100%)',
+  },
+  {
+    id: 'dark-mode',
+    name: 'Dark Mode',
+    description: 'Fundo escuro, acentos neon',
+    fonts: ['Space Grotesk'],
+    colors: {
+      primary: '#00ff88',
+      secondary: '#00ccff',
+      background: '#0a0a0a',
+      text: '#e0e0e0',
+      accent: '#00ff88',
+    },
+    previewGradient: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%)',
+  },
+  {
+    id: 'gradient',
+    name: 'Gradiente',
+    description: 'Fundos em gradiente suave',
+    fonts: ['Outfit'],
+    colors: {
+      primary: '#6366f1',
+      secondary: '#a855f7',
+      background: '#eef2ff',
+      text: '#ffffff',
+      accent: '#c084fc',
+    },
+    previewGradient: 'linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%)',
+  },
+  {
+    id: 'editorial',
+    name: 'Editorial / Magazine',
+    description: 'Estilo revista, colunas, serifado',
+    fonts: ['Cormorant Garamond', 'Montserrat'],
+    colors: {
+      primary: '#1a1a1a',
+      secondary: '#c41e3a',
+      background: '#fefcf3',
+      text: '#1a1a1a',
+      accent: '#c41e3a',
+    },
+    previewGradient: 'linear-gradient(135deg, #fefcf3 0%, #f5e6d3 100%)',
+  },
+  {
+    id: 'tech-modern',
+    name: 'Tech / Moderno',
+    description: 'Geométrico, monoespaçado, futurista',
+    fonts: ['JetBrains Mono', 'Inter'],
+    colors: {
+      primary: '#00d4ff',
+      secondary: '#7c3aed',
+      background: '#0f172a',
+      text: '#e2e8f0',
+      accent: '#00d4ff',
+    },
+    previewGradient: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #7c3aed 100%)',
+  },
+  {
+    id: 'handwritten',
+    name: 'Manuscrito / Orgânico',
+    description: 'Escrita à mão, formas orgânicas',
+    fonts: ['Caveat', 'Nunito'],
+    colors: {
+      primary: '#5b4636',
+      secondary: '#8b7355',
+      background: '#fef9ef',
+      text: '#3d2b1f',
+      accent: '#d4956a',
+    },
+    previewGradient: 'linear-gradient(135deg, #fef9ef 0%, #f5e6d3 100%)',
+  },
+]
+
+export function getLayout(id: string): LayoutMeta {
+  return LAYOUTS.find((l) => l.id === id) || LAYOUTS[0]
+}
